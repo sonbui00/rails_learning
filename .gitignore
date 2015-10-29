@@ -21,3 +21,6 @@
 
 # ignore Gemfile.lock
 /Gemfile.lock
+
+# ignore uploaded test image
+/public/uploads

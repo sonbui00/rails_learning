@@ -13,11 +13,18 @@ User.create!(name: 'Example User',
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
- 99.times do |n|
+99.times do |n|
   User.create!(name: Faker::Name.name,
               email: "example#{n}@example.com",
               password: '123456',
               password_confirmation: '123456',
               activated: true,
               activated_at: Time.zone.now)
- end
+end
+
+users = User.order(:created_at).take 6
+50.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
+end
+
