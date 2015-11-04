@@ -1,0 +1,15 @@
+one:
+  follower: sonbv
+  followed: hacker
+
+two:
+  follower: sonbv
+  followed: user_3
+
+three:
+  follower: hacker
+  followed: sonbv
+
+four:
+  follower: user_6
+  followed: sonbv
